@@ -6,7 +6,7 @@ resolver = "2"
 members = ["crates/blockifier"]
 exclude = ["ensure_no_std"]
 [workspace.dependencies]
-cairo-felt = { git = "https://github.com/keep-starknet-strange/cairo-rs.git", branch = "no_std-support-with-cairo-1", default-features = false }
+cairo-felt = { git = "https://github.com/apoorvsadana/cairo-rs", branch = "dev/query_tx_version", default-features = false }
 cairo-vm = { git = "https://github.com/apoorvsadana/cairo-rs", branch = "dev/query_tx_version", default-features = false }
 assert_matches = { version = "1.5.0", default-features = false }
 cairo-lang-casm = { git = "https://github.com/keep-starknet-strange/cairo.git", branch = "no_std-support", default-features = false }

@@ -162,7 +162,7 @@ name = "blockifier"
 version = "0.1.0"
 dependencies = [
  "assert_matches",
- "cairo-felt 0.6.0 (git+https://github.com/keep-starknet-strange/cairo-rs.git?branch=no_std-support-with-cairo-1)",
+ "cairo-felt 0.6.0 (git+https://github.com/apoorvsadana/cairo-rs?branch=dev/query_tx_version)",
  "cairo-lang-casm",
  "cairo-lang-casm-contract-class",
  "cairo-lang-utils",
