@@ -31,7 +31,7 @@ scale-info = { version = "2.8.0", default-features = false }
 serde = { version = "1.0.130", default-features = false }
 serde_json = { version = "1.0.81", default-features = false }
 sha3 = { version = "0.10.6", default-features = false }
-starknet_api = { git = "https://github.com/keep-starknet-strange/starknet-api", branch = "no_std-support", default-features = false, features = [
+starknet_api = { git = "https://github.com/apoorvsadana/starknet-api-madara", branch = "dev/query_tx_version", default-features = false, features = [
     "parity-scale-codec",
 ] }
 strum = { version = "0.24.1", default-features = false }
@@ -42,5 +42,5 @@ thiserror-no-std = { version = "2.0.2", default-features = false }
 lazy_static = { version = "1.4.0", default-features = false, features = [
     "spin_no_std",
 ] }
-starknet-crypto = { version = "0.5.1", default-features = false }
+starknet-crypto = { git = "https://github.com/xJonathanLEI/starknet-rs", branch = "dev/query_tx_version", default-features = false }
 libm = { version = "0.2.7", default-features = false }
