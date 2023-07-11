@@ -162,12 +162,12 @@ name = "blockifier"
 version = "0.1.0"
 dependencies = [
  "assert_matches",
- "cairo-felt",
+ "cairo-felt 0.6.0 (git+https://github.com/keep-starknet-strange/cairo-rs.git?branch=no_std-support-with-cairo-1)",
  "cairo-lang-casm",
  "cairo-lang-casm-contract-class",
  "cairo-lang-utils",
  "cairo-lang-vm-utils",
- "cairo-vm",
+ "cairo-vm 0.6.0 (git+https://github.com/apoorvsadana/cairo-rs?branch=dev/query_tx_version)",
  "derive_more",
  "hashbrown 0.13.2",
  "indexmap 2.0.0-pre",
@@ -214,6 +214,19 @@ checksum = "14c189c53d098945499cdfa7ecc63567cf3886b3332b312a5b4585d8d3a6a610"
 [[package]]
 name = "cairo-felt"
 version = "0.6.0"
+source = "git+https://github.com/apoorvsadana/cairo-rs?branch=dev/query_tx_version#05d1cbbce8d869b069cc340857d5dee03dd4453b"
+dependencies = [
+ "lazy_static",
+ "num-bigint",
+ "num-integer",
+ "num-traits",
+ "parity-scale-codec",
+ "serde",
+]
+
+[[package]]
+name = "cairo-felt"
+version = "0.6.0"
 source = "git+https://github.com/keep-starknet-strange/cairo-rs.git?branch=no_std-support-with-cairo-1#3f406f4a335fd3a0bf22237e493be5a9947efa7d"
 dependencies = [
  "lazy_static",
@@ -255,7 +268,7 @@ name = "cairo-lang-utils"
 version = "2.0.0-rc2"
 source = "git+https://github.com/keep-starknet-strange/cairo.git?branch=no_std-support#64ef5864c5b92ee40b46ecb0b6fd854bd790938d"
 dependencies = [
- "cairo-felt",
+ "cairo-felt 0.6.0 (git+https://github.com/keep-starknet-strange/cairo-rs.git?branch=no_std-support-with-cairo-1)",
  "hashbrown 0.14.0",
  "indexmap 2.0.0",
  "itertools",
@@ -273,14 +286,22 @@ source = "git+https://github.com/keep-starknet-strange/cairo.git?branch=no_std-s
 dependencies = [
  "ark-ff",
  "ark-std 0.3.0",
- "cairo-felt",
+ "cairo-felt 0.6.0 (git+https://github.com/keep-starknet-strange/cairo-rs.git?branch=no_std-support-with-cairo-1)",
  "cairo-lang-casm",
  "cairo-lang-utils",
- "cairo-vm",
+ "cairo-vm 0.6.0 (git+https://github.com/keep-starknet-strange/cairo-rs.git?branch=no_std-support-with-cairo-1)",
  "hashbrown 0.14.0",
  "num-bigint",
  "num-integer",
  "num-traits",
+]
+
+[[package]]
+name = "cairo-take_until_unbalanced"
+version = "0.29.0"
+source = "git+https://github.com/apoorvsadana/cairo-rs?branch=dev/query_tx_version#05d1cbbce8d869b069cc340857d5dee03dd4453b"
+dependencies = [
+ "nom",
 ]
 
 [[package]]
@@ -294,17 +315,17 @@ dependencies = [
 [[package]]
 name = "cairo-vm"
 version = "0.6.0"
-source = "git+https://github.com/keep-starknet-strange/cairo-rs.git?branch=no_std-support-with-cairo-1#3f406f4a335fd3a0bf22237e493be5a9947efa7d"
+source = "git+https://github.com/apoorvsadana/cairo-rs?branch=dev/query_tx_version#05d1cbbce8d869b069cc340857d5dee03dd4453b"
 dependencies = [
  "anyhow",
  "ark-ff",
  "ark-std 0.3.0",
  "bincode",
  "bitvec",
- "cairo-felt",
+ "cairo-felt 0.6.0 (git+https://github.com/apoorvsadana/cairo-rs?branch=dev/query_tx_version)",
  "cairo-lang-casm",
  "cairo-lang-casm-contract-class",
- "cairo-take_until_unbalanced",
+ "cairo-take_until_unbalanced 0.29.0 (git+https://github.com/apoorvsadana/cairo-rs?branch=dev/query_tx_version)",
  "generic-array",
  "hashbrown 0.13.2",
  "hex",
@@ -316,6 +337,37 @@ dependencies = [
  "num-prime",
  "num-traits",
  "parity-scale-codec",
+ "rand",
+ "rand_core",
+ "serde",
+ "serde_bytes",
+ "serde_json",
+ "sha2",
+ "sha3",
+ "starknet-crypto 0.6.0",
+ "thiserror",
+ "thiserror-no-std",
+]
+
+[[package]]
+name = "cairo-vm"
+version = "0.6.0"
+source = "git+https://github.com/keep-starknet-strange/cairo-rs.git?branch=no_std-support-with-cairo-1#3f406f4a335fd3a0bf22237e493be5a9947efa7d"
+dependencies = [
+ "anyhow",
+ "bincode",
+ "bitvec",
+ "cairo-felt 0.6.0 (git+https://github.com/keep-starknet-strange/cairo-rs.git?branch=no_std-support-with-cairo-1)",
+ "cairo-take_until_unbalanced 0.29.0 (git+https://github.com/keep-starknet-strange/cairo-rs.git?branch=no_std-support-with-cairo-1)",
+ "generic-array",
+ "hashbrown 0.13.2",
+ "hex",
+ "keccak",
+ "lazy_static",
+ "nom",
+ "num-bigint",
+ "num-integer",
+ "num-traits",
  "rand",
  "rand_core",
  "serde",
@@ -1080,6 +1132,7 @@ version = "0.6.0"
 source = "git+https://github.com/xJonathanLEI/starknet-rs?branch=dev/query_tx_version#73151f51215acb26b2cdc79336f80bbee4fad3f4"
 dependencies = [
  "crypto-bigint",
+ "hex",
  "hmac",
  "num-bigint",
  "num-integer",
