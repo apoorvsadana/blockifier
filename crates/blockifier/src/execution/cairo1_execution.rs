@@ -222,7 +222,7 @@ pub fn run_entry_point(
     program_segment_size: usize,
 ) -> Result<(), VirtualMachineExecutionError> {
     // TODO(Dori,30/06/2023): propagate properly once VM allows it.
-    let mut run_resources = RunResources::default();
+    let mut run_resources = RunResources::new(100000);
     let verify_secure = true;
     let args: Vec<&CairoArg> = args.iter().collect();
     runner.run_from_entrypoint(
@@ -305,11 +305,10 @@ fn get_call_result(
     // TODO(spapini): Validate implicits.
 
     let gas = &return_result[0];
-    let MaybeRelocatable::Int(gas) = gas
-    else {
-        return
-        Err(PostExecutionError::MalformedReturnData {
-            error_message: "Error extracting return data.".to_string()});
+    let MaybeRelocatable::Int(gas) = gas else {
+        return Err(PostExecutionError::MalformedReturnData {
+            error_message: "Error extracting return data.".to_string(),
+        });
     };
     if gas < &Felt252::from(0) || gas > &syscall_handler.call.initial_gas {
         return Err(PostExecutionError::MalformedReturnData {
