@@ -7,9 +7,7 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2cba883-c04f-4bf5-a451-173c99393895" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-    </list>
+    <list default="true" id="d2cba883-c04f-4bf5-a451-173c99393895" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,8 +31,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="no_std-support-substrate" />
+                    <option name="lastUsedInstant" value="1704723149" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="no_std-support-7578442-substrate" />
-                    <option name="lastUsedInstant" value="1704722580" />
+                    <option name="lastUsedInstant" value="1704723060" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="no_std-support-7578442" />
@@ -72,7 +74,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "no__std-support-7578442-substrate",
+    "git-widget-placeholder": "no__std-support-substrate",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -111,7 +113,7 @@
       <workItem from="1704481375703" duration="18000" />
       <workItem from="1704483992386" duration="30000" />
       <workItem from="1704484027773" duration="3000" />
-      <workItem from="1704722263976" duration="694000" />
+      <workItem from="1704722263976" duration="1023000" />
     </task>
     <servers />
   </component>
