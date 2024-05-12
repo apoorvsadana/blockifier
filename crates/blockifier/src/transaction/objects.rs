@@ -498,6 +498,7 @@ pub trait HasRelatedFeeType {
     }
 }
 
+#[derive(Debug)]
 #[derive(Clone, Copy, Hash, EnumIter, Eq, PartialEq, Encode, Decode)]
 #[cfg_attr(feature = "scale-info", derive(scale_info::TypeInfo))]
 pub enum FeeType {
